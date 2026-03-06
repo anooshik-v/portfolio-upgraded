@@ -2,49 +2,51 @@
   <h3>Some Things I have Built</h3>
   <div class="work-grid">
 
-    <mat-card *ngFor="let project of projects" class="project">
-      <mat-card-header>
-        <mat-card-title>{{ project.name }}</mat-card-title>
-       
-      <span class="spacer"></span>
-          <button
-            matTooltip="View Code Source"
-            mat-button
-            *ngIf="project.link"
-            (click)="openLink(project.link)"
-            aria-label="External Link"
-            class="external"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <fa-icon icon="code-branch"></fa-icon>
-          </button>
-          <button
-            matTooltip="View Demo"
-            mat-button
-            *ngIf="project.demo"
-            (click)="openLink(project.demo)"
-            aria-label="External Link"
-            class="external"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <fa-icon icon="eye"></fa-icon>
-          </button>
-        
+    @for (project of projects; track project) {
+      <mat-card class="project">
+        <mat-card-header>
+          <mat-card-title>{{ project.name }}</mat-card-title>
+          <span class="spacer"></span>
+          @if (project.link) {
+            <button
+              matTooltip="View Code Source"
+              mat-button
+              (click)="openLink(project.link)"
+              aria-label="External Link"
+              class="external"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <fa-icon icon="code-branch"></fa-icon>
+            </button>
+          }
+          @if (project.demo) {
+            <button
+              matTooltip="View Demo"
+              mat-button
+              (click)="openLink(project.demo)"
+              aria-label="External Link"
+              class="external"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <fa-icon icon="eye"></fa-icon>
+            </button>
+          }
         </mat-card-header>
-       
-      <mat-card-content>
-        <p class="project-description">{{ project.description }}</p>
-      </mat-card-content>
-      
-      <mat-card-footer style=" padding: 16px;">
-        <mat-chip-set>
-          <mat-chip color='accent' *ngFor="let technology of project.technologies">
-            {{ technology }}
-          </mat-chip>
+        <mat-card-content>
+          <p class="project-description">{{ project.description }}</p>
+        </mat-card-content>
+        <mat-card-footer style=" padding: 16px;">
+          <mat-chip-set>
+            @for (technology of project.technologies; track technology) {
+              <mat-chip color='accent'>
+                {{ technology }}
+              </mat-chip>
+            }
           </mat-chip-set>
-      </mat-card-footer>
-    </mat-card>
+        </mat-card-footer>
+      </mat-card>
+    }
   </div>
 </div>

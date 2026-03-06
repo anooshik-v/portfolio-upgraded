@@ -2,35 +2,51 @@
   <h3>What is My Professional Experience</h3>
   <div class="container">
     <div role="tablist" class="list">
-      <div *ngFor="let place of places" class="place">
-        <button id="place-{{place.id}}" class="places" role="tab" type="button" (click)="onSelect(place)">
-          <span>
-            <fa-icon *ngIf="place.technologies" icon="laptop-file"></fa-icon>  
-            <fa-icon *ngIf="place.coursework" icon="graduation-cap"></fa-icon>  
-          </span>
-          <span>{{place.name}}</span>
-        </button>
+      @for (place of places; track place) {
+        <div class="place">
+          <button id="place-{{place.id}}" class="places" role="tab" type="button" (click)="onSelect(place)">
+            <span>
+              @if (place.technologies) {
+                <fa-icon icon="laptop-file"></fa-icon>
+              }
+              @if (place.coursework) {
+                <fa-icon icon="graduation-cap"></fa-icon>
+              }
+            </span>
+            <span>{{place.name}}</span>
+          </button>
+        </div>
+      }
+    </div>
+    @if (selectedPlace) {
+      <div [@curtain]>
+        <p style="font-size: large;">{{selectedPlace.position}} <span class="pop">&#64;{{selectedPlace.name}}</span></p>
+        <p>{{selectedPlace.duration}}</p>
+        <p>{{selectedPlace.place}}</p>
+        <p>{{selectedPlace.description}}</p>
+        @if (selectedPlace.technologies) {
+          <h6>technologies i worked with:</h6>
+        }
+        @for (technology of selectedPlace.technologies; track technology) {
+          <li>
+            <span>
+              <fa-icon class="pop" icon="bolt"></fa-icon>  {{technology}}
+            </span>
+          </li>
+        }
+        @if (selectedPlace.coursework) {
+          <h6>coursework i studied:</h6>
+        }
+        @for (coursework of selectedPlace.coursework; track coursework) {
+          <li>
+            <span>
+              <fa-icon class="pop" icon="pen"></fa-icon>
+              {{coursework}}
+            </span>
+          </li>
+        }
       </div>
-    </div>
-    <div *ngIf="selectedPlace" [@curtain]>
-      <p style="font-size: large;">{{selectedPlace.position}} <span class="pop">&#64;{{selectedPlace.name}}</span></p>
-      <p>{{selectedPlace.duration}}</p>
-      <p>{{selectedPlace.place}}</p>
-      <p>{{selectedPlace.description}}</p>
-      <h6 *ngIf="selectedPlace.technologies">technologies i worked with:</h6>
-      <li *ngFor="let technology of selectedPlace.technologies">
-        <span>
-          <fa-icon class="pop" icon="bolt"></fa-icon>  {{technology}}
-        </span>
-      </li>
-      <h6 *ngIf="selectedPlace.coursework">coursework i studied:</h6>
-      <li *ngFor="let coursework of selectedPlace.coursework">
-        <span>
-          <fa-icon class="pop" icon="pen"></fa-icon>     
-          {{coursework}}
-        </span>
-      </li>
-    </div>
+    }
   </div>
   <div>
     <p>Since the summer of 2021, I have also started working as a freelancer on <a target="_blank" style="color:white" href="https://www.upwork.com/freelancers/~01094659b026ea2818/">Upwork</a> and have been fortunate enough to cooperate with clients of different backgrounds on a variety of projects.</p>
