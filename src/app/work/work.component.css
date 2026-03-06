@@ -1,10 +1,10 @@
-ul{
-	list-style: none;
-padding: 0;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.work-grid{
- display: grid;
+.work-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: .5rem;
   align-items: start;
@@ -12,72 +12,81 @@ padding: 0;
 
 }
 
-.project-top{
-	display: flex;
-	 justify-content: space-between;
-	 margin-bottom: 8px;
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
-.project{
-	 border-radius: 16px;
-  background-color:var(--light-pink);
+
+.project {
+  border-radius: 16px;
+  background-color: var(--light-pink);
   padding: 16px;
-box-shadow: 0 4px 5px rgba(194, 130, 189, 0.25);
-margin-bottom: 8px;
+  box-shadow: 0 4px 5px rgba(194, 130, 189, 0.25);
+  margin-bottom: 8px;
 }
-.project-description{
-    height: 20vh;
-      overflow-y: scroll;
+
+.project-description {
+  height: 20vh;
+  overflow-y: scroll;
 
 }
+
 .project-title {
-    margin: 0px 0px 10px;
-    color: var(--lightest-slate);
-    font-size: 22px;
-}
-.project-tech-list{
-
- padding: 0;
-}
-.tech{
-	 display:inline;
-	color: var(--text-light);
-    font-size: small; 
-
-      padding-right: 12px;
-}
-fa-icon{
-	padding-right: 8px;
-
-}
-a fa-icon{
-    color: var(--text-mid);
-}
-
-
-.folder{
+  margin: 0px 0px 10px;
+  color: var(--lightest-slate);
   font-size: 22px;
 }
-li{
+
+.project-tech-list {
+
+  padding: 0;
+}
+
+.tech {
+  display: inline;
+  color: var(--text-light);
+  font-size: small;
+
+  padding-right: 12px;
+}
+
+fa-icon {
+  padding-right: 8px;
+
+}
+
+a fa-icon {
+  color: var(--text-mid);
+}
+
+
+.folder {
+  font-size: 22px;
+}
+
+li {
   z-index: 100;
 }
 
 
 @media screen and (max-width: 768px) {
-.work-grid{
-   width: 90%;
+  .work-grid {
+    width: 90%;
+  }
 }
-}
-@media only screen (min-width: 768px){
 
-}
+@media only screen and (min-width: 768px) {}
 
 .card-subtitle {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Aligns children to the right */
+  justify-content: flex-end;
+  /* Aligns children to the right */
 }
 
 .spacer {
-  
-  flex: 1; /* Pushes the buttons to the right */
+
+  flex: 1;
+  /* Pushes the buttons to the right */
 }
