@@ -1,52 +1,40 @@
 <div class="section">
   <h3>Some Things I have Built</h3>
-  <div class="work-grid">
 
-    @for (project of projects; track project) {
-      <mat-card class="project">
-        <mat-card-header>
-          <mat-card-title>{{ project.name }}</mat-card-title>
-          <span class="spacer"></span>
-          @if (project.link) {
-            <button
-              matTooltip="View Code Source"
-              mat-button
-              (click)="openLink(project.link)"
-              aria-label="External Link"
-              class="external"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
+  <mat-tab-group class="tabs" [(selectedIndex)]="selectedIndex">
+    <mat-tab *ngFor="let section of sections" [label]="section.label">
+      <div class="work-grid">
+        <mat-card class="project" *ngFor="let project of section.projects">
+          <mat-card-header>
+            <mat-card-title>{{ project.name }}</mat-card-title>
+            <span class="spacer"></span>
+
+            <button *ngIf="project.link" matTooltip="View Code Source" mat-button (click)="openLink(project.link)"
+              aria-label="View code source" class="external">
               <fa-icon icon="code-branch"></fa-icon>
             </button>
-          }
-          @if (project.demo) {
-            <button
-              matTooltip="View Demo"
-              mat-button
-              (click)="openLink(project.demo)"
-              aria-label="External Link"
-              class="external"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
+
+            <button *ngIf="project.demo" matTooltip="View Demo" mat-button (click)="openLink(project.demo)"
+              aria-label="View demo" class="external">
               <fa-icon icon="eye"></fa-icon>
             </button>
-          }
-        </mat-card-header>
-        <mat-card-content>
-          <p class="project-description">{{ project.description }}</p>
-        </mat-card-content>
-        <mat-card-footer style=" padding: 16px;">
-          <mat-chip-set>
-            @for (technology of project.technologies; track technology) {
-              <mat-chip color='accent'>
+
+          </mat-card-header>
+
+          <mat-card-content>
+            <p class="project-description">{{ project.description }}</p>
+          </mat-card-content>
+
+          <mat-card-footer style="padding: 16px;">
+            <mat-chip-set>
+              <mat-chip *ngFor="let technology of project.technologies" color="accent">
                 {{ technology }}
               </mat-chip>
-            }
-          </mat-chip-set>
-        </mat-card-footer>
-      </mat-card>
-    }
-  </div>
+            </mat-chip-set>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
 </div>

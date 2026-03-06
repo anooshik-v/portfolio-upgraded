@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Work } from './work';
+import { Work, WorkSection } from './work';
 import { Place } from './place';
 import PlacesJson from '../assets/places.json';
 import WorksJson from '../assets/works.json';
@@ -7,16 +7,20 @@ import WorksJson from '../assets/works.json';
   providedIn: 'root'
 })
 export class DataService {
-  works: Work[] = WorksJson;
-    places: Place[] = PlacesJson;
+  works: WorkSection[] = WorksJson;
+  places: Place[] = PlacesJson;
   constructor() { }
   getPlaces(): Place[] {
-  return this.places;
-}
+    return this.places;
+  }
 
 
   getWorks(): Work[] {
-  return this.works;
-}
+    return this.works.flatMap(section => section.projects);
+  }
+
+  getWorkSections(): WorkSection[] {
+    return this.works;
+  }
 
 }

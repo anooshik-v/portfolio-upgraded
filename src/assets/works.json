@@ -1,60 +1,177 @@
 [
-  {
-      "name": "My Portfolio",
-      "description":"This website is made from scratch using the latest version of Angular (v18) and following recent UX principles.",
-      "year":"2022",
-      "link":"https://github.com/anooshik-v/portfolio-upgraded",
-      "demo": "https://anooshik.am",
-      "technologies":[ "Angular"]
-  },
-  {
-       "name": "Rolling Ball",
-       "description":"Dive into the vibrant world of Pachinko Paradise, a delightful pachinko game crafted with Unity. This casual arcade game combines traditional Japanese pachinko mechanics with modern visuals and engaging sound effects. Players drop shimmering balls into the machine, aiming to land them in winning pockets to score points and unlock exciting rewards.",
-     
-    "demo":   "https://play.unity.com/en/games/a8947ac3-3247-415d-b5a0-8f58c451cb44/pachinko-101",
-    "technologies":[ "Unity"]
-     
-       },  {
-      "name": "Wedding Bot and Admin Panel",
-      "description":"This is a short project I made. It included connecting to telegram's bot API to receive messages and send responses based on the intention the user will have. The intentions included knowing about venue, rsvp, fun facts about the soon-to-be-wedded couple and quizzes. All of which were customizable from an admin portal.",
-      "year":"2021",
-      "technologies":["Java","Telegram API", "MySQL", "Angular", "Heroku Deployment"]
-  },
-  {
-      "name": "L&L",
-      "description":"This project was contract work with a client that wanted to get to market very quickly. It included creating the application from scratch, identify and create appropriate rest api call using Java's Spring boot framework and then creating an admin portal for web using Angular and AngularJS. I was also responsible for creating and maintaining the database schema. The outcome of the project was Rest APIs created with Java as well as admin portal created with specific roles in administration that could do different things to view and manage the customers and clients signing up for their services.",
-      "year":"2021",
-      "technologies":["Java","Stripe Payment", "MySQL", "Angular", "Azure Deployment"]
-  },
-  {
-      "name": "D ",
-      "description":"This project was built from scratch and included working with file storage apis to store documents and retrieve them securely. It included creating rest APIs to be used by mobile to preform those actions. as well. The API was used to allow users to upload a text file, receive a token, which could be passed to the same API for an encrypted and timestamped copy of that file. The file would be accessible only once per request. The outcome of the project was implementing the backend, admin portal and mobile application done in ios and android. The project was deployed on AWS.",
-      "year":"2021",
-      "technologies":["Java","Google and Apple Payments","Apple Payments", "MySQL", "Angular", "AWS Deployment"]
-  },
-  {
-      "name": "TT",
-      "description":"An application developed for a youth organization NGO that included displaying news and registering for accounts to take quizzes related to NGOs actions. I was responsible for creating the backend rest APIs using Java's Spring Boot framework. Then for administration tasks such as adding questions to the quiz and checking to see how many users they had, I created a website application for admins using Angular and AngularJS framework. The mobile application launched and has generated value and marketing for the youth organization. The members of the organization are using the product and to this day adding new quiz questions and informing the other youth of their NGOs functionalities and values.",
-      "year":"2021",
-      "technologies":["Java","Telegram API", "MySQL", "Angular", "Heroku Deployment"]
-  },
-  {
-      "name": "Barcode App",
-      "description":"Small Angular project used to detect the barcode of different products and showing the country of manufacturing. The application included customization of blacklisting countries and whitelisting others to encourage local products.",
-      "year":"2021",
-      "technologies":["Angular"]
-  },
     {
-      "name": "Pronto",
-      "description":"Request and Task Management for Internal and External Requests. Implemented the backend with Java's Spring boot framework and used AngularJS to create admin portal and client facing section of the web application. I created and managed web application that was built with AngularJS. The outcome included full implementation of the project included backend, frontend done with web and mobile versions. It included admin portal as well as user portal. Later on reporting tools were added to the website for administration to include statistics and charts about the tasks and performance of each engineer doing those tasks.",
-      "year":"2021",
-      "technologies":["Java","AngularJS", "VPS Setup and Tomcat Deployment"]
-  },
+        "label": "Front-end Projects",
+        "projects": [
+            {
+                "name": "My Portfolio",
+                "description": "This website is made from scratch using the latest version of Angular (v18) and following recent UX principles.",
+                "year": "2022",
+                "link": "https://github.com/anooshik-v/portfolio-upgraded",
+                "demo": "https://anooshik.am",
+                "technologies": [
+                    "Angular"
+                ]
+            },
+            {
+                "name": "Oscar's Portfolio",
+                "description": "Dive into Oscar’s world, where every detail has been thoughtfully curated to showcase his unique charm and personality. Enjoy exploring the site as much as Oscar enjoys his daily walks and belly rubs!",
+                "year": "2024",
+                "link": "https://github.com/anooshik-v/oscarik-portfolio",
+                "demo": "https://anooshik.am/projects/oscarik",
+                "technologies": [
+                    "Angular"
+                ]
+            },
+            {
+                "name": "L&L",
+                "description": "This project was contract work with a client that wanted to get to market very quickly. It included creating the application from scratch, identify and create appropriate rest api call using Java's Spring boot framework and then creating an admin portal for web using Angular and AngularJS. I was also responsible for creating and maintaining the database schema. The outcome of the project was Rest APIs created with Java as well as admin portal created with specific roles in administration that could do different things to view and manage the customers and clients signing up for their services.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Stripe Payment",
+                    "MySQL",
+                    "Angular",
+                    "Azure Deployment"
+                ]
+            },
+            {
+                "name": "D ",
+                "description": "This project was built from scratch and included working with file storage apis to store documents and retrieve them securely. It included creating rest APIs to be used by mobile to preform those actions. as well. The API was used to allow users to upload a text file, receive a token, which could be passed to the same API for an encrypted and timestamped copy of that file. The file would be accessible only once per request. The outcome of the project was implementing the backend, admin portal and mobile application done in ios and android. The project was deployed on AWS.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Google and Apple Payments",
+                    "Apple Payments",
+                    "MySQL",
+                    "Angular",
+                    "AWS Deployment"
+                ]
+            },
+            {
+                "name": "TT",
+                "description": "An application developed for a youth organization NGO that included displaying news and registering for accounts to take quizzes related to NGOs actions. I was responsible for creating the backend rest APIs using Java's Spring Boot framework. Then for administration tasks such as adding questions to the quiz and checking to see how many users they had, I created a website application for admins using Angular and AngularJS framework. The mobile application launched and has generated value and marketing for the youth organization. The members of the organization are using the product and to this day adding new quiz questions and informing the other youth of their NGOs functionalities and values.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Telegram API",
+                    "MySQL",
+                    "Angular",
+                    "Heroku Deployment"
+                ]
+            },
+            {
+                "name": "Pronto",
+                "description": "Request and Task Management for Internal and External Requests. Implemented the backend with Java's Spring boot framework and used AngularJS to create admin portal and client facing section of the web application. I created and managed web application that was built with AngularJS. The outcome included full implementation of the project included backend, frontend done with web and mobile versions. It included admin portal as well as user portal. Later on reporting tools were added to the website for administration to include statistics and charts about the tasks and performance of each engineer doing those tasks.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "AngularJS",
+                    "VPS Setup and Tomcat Deployment"
+                ]
+            },
+            {
+                "name": "Bank Mobile Application and Admin Portal",
+                "description": "The project was to create a mobile application for one of the local banks. The task was to also create the backend for the calls mobile made and cache the calls to bank's backend apis. The project also included admin portal for the bank cashiers to view the number of mobile users signed up and to activate and deactivate the users if need be. The outcome of the project was the admin portal for bank cashiers and mobile website for online banking.",
+                "year": "2018",
+                "technologies": [
+                    "Java",
+                    "Bootstrap"
+                ]
+            },
+            {
+                "name": "Barcode App",
+                "description": "Small Angular project used to detect the barcode of different products and showing the country of manufacturing. The application included customization of blacklisting countries and whitelisting others to encourage local products.",
+                "year": "2021",
+                "technologies": [
+                    "Angular"
+                ]
+            }
+        ]
+    },
     {
-      "name": "Bank Mobile Application and Admin Portal",
-      "description":"The project was to create a mobile application for one of the local banks. The task was to also create the backend for the calls mobile made and cache the calls to bank's backend apis. The project also included admin portal for the bank cashiers to view the number of mobile users signed up and to activate and deactivate the users if need be. The outcome of the project was the admin portal for bank cashiers and mobile website for online banking.",
-      "year":"2018",
-      "technologies":["Java","Bootstrap"]
-  }
-  
-  ]
+        "label": "Back-end Projects",
+        "projects": [
+            {
+                "name": "Wedding Bot and Admin Panel",
+                "description": "This is a short project I made. It included connecting to telegram's bot API to receive messages and send responses based on the intention the user will have. The intentions included knowing about venue, rsvp, fun facts about the soon-to-be-wedded couple and quizzes. All of which were customizable from an admin portal.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Telegram API",
+                    "MySQL",
+                    "Angular",
+                    "Heroku Deployment"
+                ]
+            },
+            {
+                "name": "L&L",
+                "description": "This project was contract work with a client that wanted to get to market very quickly. It included creating the application from scratch, identify and create appropriate rest api call using Java's Spring boot framework and then creating an admin portal for web using Angular and AngularJS. I was also responsible for creating and maintaining the database schema. The outcome of the project was Rest APIs created with Java as well as admin portal created with specific roles in administration that could do different things to view and manage the customers and clients signing up for their services.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Stripe Payment",
+                    "MySQL",
+                    "Angular",
+                    "Azure Deployment"
+                ]
+            },
+            {
+                "name": "D ",
+                "description": "This project was built from scratch and included working with file storage apis to store documents and retrieve them securely. It included creating rest APIs to be used by mobile to preform those actions. as well. The API was used to allow users to upload a text file, receive a token, which could be passed to the same API for an encrypted and timestamped copy of that file. The file would be accessible only once per request. The outcome of the project was implementing the backend, admin portal and mobile application done in ios and android. The project was deployed on AWS.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Google and Apple Payments",
+                    "Apple Payments",
+                    "MySQL",
+                    "Angular",
+                    "AWS Deployment"
+                ]
+            },
+            {
+                "name": "TT",
+                "description": "An application developed for a youth organization NGO that included displaying news and registering for accounts to take quizzes related to NGOs actions. I was responsible for creating the backend rest APIs using Java's Spring Boot framework. Then for administration tasks such as adding questions to the quiz and checking to see how many users they had, I created a website application for admins using Angular and AngularJS framework. The mobile application launched and has generated value and marketing for the youth organization. The members of the organization are using the product and to this day adding new quiz questions and informing the other youth of their NGOs functionalities and values.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "Telegram API",
+                    "MySQL",
+                    "Angular",
+                    "Heroku Deployment"
+                ]
+            },
+            {
+                "name": "Pronto",
+                "description": "Request and Task Management for Internal and External Requests. Implemented the backend with Java's Spring boot framework and used AngularJS to create admin portal and client facing section of the web application. I created and managed web application that was built with AngularJS. The outcome included full implementation of the project included backend, frontend done with web and mobile versions. It included admin portal as well as user portal. Later on reporting tools were added to the website for administration to include statistics and charts about the tasks and performance of each engineer doing those tasks.",
+                "year": "2021",
+                "technologies": [
+                    "Java",
+                    "AngularJS",
+                    "VPS Setup and Tomcat Deployment"
+                ]
+            },
+            {
+                "name": "Bank Mobile Application and Admin Portal",
+                "description": "The project was to create a mobile application for one of the local banks. The task was to also create the backend for the calls mobile made and cache the calls to bank's backend apis. The project also included admin portal for the bank cashiers to view the number of mobile users signed up and to activate and deactivate the users if need be. The outcome of the project was the admin portal for bank cashiers and mobile website for online banking.",
+                "year": "2018",
+                "technologies": [
+                    "Java",
+                    "Bootstrap"
+                ]
+            }
+        ]
+    },
+    {
+        "label": "Other Projects",
+        "projects": [
+            {
+                "name": "Rolling Ball",
+                "description": "Dive into the vibrant world of Pachinko Paradise, a delightful pachinko game crafted with Unity. This casual arcade game combines traditional Japanese pachinko mechanics with modern visuals and engaging sound effects. Players drop shimmering balls into the machine, aiming to land them in winning pockets to score points and unlock exciting rewards.",
+                "demo": "https://play.unity.com/en/games/a8947ac3-3247-415d-b5a0-8f58c451cb44/pachinko-101",
+                "technologies": [
+                    "Unity"
+                ]
+            }
+        ]
+    }
+]

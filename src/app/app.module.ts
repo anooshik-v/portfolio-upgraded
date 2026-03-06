@@ -11,15 +11,16 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { LavaComponent } from './lava/lava.component';
-import { faFolderOpen, faCodeBranch,faEye,faLaptopFile,faGraduationCap,faBolt,faPen,faBars } from '@fortawesome/free-solid-svg-icons';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { faFolderOpen, faCodeBranch, faEye, faLaptopFile, faGraduationCap, faBolt, faPen, faBars } from '@fortawesome/free-solid-svg-icons';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -38,8 +39,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     MatSidenavModule,
-    MatButtonModule, MatDividerModule, MatIconModule,MatCardModule,
+    MatButtonModule, MatDividerModule, MatIconModule, MatCardModule,
     MatChipsModule,
+    MatTabsModule,
     FormsModule, ReactiveFormsModule
   ],
   providers: [
@@ -48,17 +50,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   bootstrap: [AppComponent]
 })
 export class AppModule {
- constructor(library: FaIconLibrary) {
+  constructor(library: FaIconLibrary) {
     library.addIcons(faFolderOpen);
     library.addIcons(faCodeBranch);
     library.addIcons(faEye);
-    library.addIcons(faLaptopFile);    
+    library.addIcons(faLaptopFile);
     library.addIcons(faGraduationCap);
     library.addIcons(faBolt);
     library.addIcons(faPen);
     library.addIcons(faBars);
 
-  } }
+  }
+}
 function provideAnimations(): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
   throw new Error('Function not implemented.');
 }
