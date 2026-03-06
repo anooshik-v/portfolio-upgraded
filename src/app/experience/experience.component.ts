@@ -4,17 +4,18 @@ import { DataService } from '../data.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css'],
-  animations: [
-    trigger('curtain', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateX(300px)' }),
-        animate('1s ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ])
-    ])
-  ]
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.css'],
+    animations: [
+        trigger('curtain', [
+            transition(':enter', [
+                style({ opacity: 0, transform: 'translateX(300px)' }),
+                animate('1s ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class ExperienceComponent implements OnInit, AfterViewInit {
   selectedPlace?: Place;

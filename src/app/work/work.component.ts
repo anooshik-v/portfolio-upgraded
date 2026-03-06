@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Work } from '../work';
 import { DataService } from '../data.service';
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.css']
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    styleUrls: ['./work.component.css'],
+    standalone: false
 })
 export class WorkComponent implements OnInit {
 
